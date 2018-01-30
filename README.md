@@ -6,10 +6,10 @@
 
 ### Bash shell and command line environment
 - using BioLinux  
- - <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2016/wiki/Jan-19-Intro-to-BioLinux>
+    - <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2016/wiki/Jan-19-Intro-to-BioLinux>
 - bash scripting  
- - <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2016/wiki/Jan-23---Exercise-1>
-  - <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2016/wiki/Jan-25-Exercise-2>  
+    - <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2016/wiki/Jan-23---Exercise-1>
+    - <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2016/wiki/Jan-25-Exercise-2>  
 
 ### Working in the cloud
 - using Github for version control
