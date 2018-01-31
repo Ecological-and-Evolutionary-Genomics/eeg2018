@@ -5,7 +5,8 @@
 #### We are using GitHub as a repository for code developed in class and for background material related to the class.
 
 #### Quick link to the EEG2018 Team Discussion board: 
-    - <https://github.com/orgs/Ecological-and-Evolutionary-Genomics/teams/eeg2018>
+- <https://github.com/orgs/Ecological-and-Evolutionary-Genomics/teams/eeg2018>
+
 ### Bash shell and command line environment
 - using BioLinux  
     - <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/Day-1---Jan-29---BioLinux-introduction>
