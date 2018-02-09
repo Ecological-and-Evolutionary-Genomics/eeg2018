@@ -42,3 +42,7 @@ grep ">" fakefasta.dup | uniq > fakefasta.uniq.fa
 cut -d ' ' -f2 fakefasta.uniq.fa | sort | uniq | wc -l > ex2answer.txt
 cat ex2answer.txt
 # 50622 unique sequences
+
+#make it into a real fasta, make tabs between columns into line break, remove basepair length label, remove excess spaces, convert 
+#remaining spaces into underscores, save final fasta as final.fasta
+cat fakefasta | tr '/t' '/n' | tr -d "length=" | tr -s ' ' | tr ' ' '_' | > final.fasta
