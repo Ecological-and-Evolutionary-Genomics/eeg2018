@@ -1,0 +1,4 @@
+cd ~
+cd fastq
+#shows file | cuts the first column before the space (gets rid of weird info after sample name) | transforms every 4 lines into 4 columns | finds all "@" and turns them into ">" | cuts the first two columns, using tab as a delimiter, and deletes the rest | makes it pretty | lists without wrapping
+cat SRR6004316_1.fastq|cut -d ' ' -f1 |  paste - - - -  | tr "@" ">"| cut -d $'\t' -f1,2 | column -t | less -S
