@@ -45,4 +45,4 @@ cat ex2answer.txt
 
 #make it into a real fasta, make tabs between columns into line break, remove basepair length label, remove excess spaces, convert 
 #remaining spaces into underscores, save final fasta as final.fasta
-cat fakefasta | tr '/t' '/n' | tr -d "length=" | tr -s ' ' | tr ' ' '_' | > final.fasta
+cat fakefasta | tr '/t' '/n' | cut -f1 -d ' ' | tr -s ' ' | tr ' ' '_' | > final.fasta
