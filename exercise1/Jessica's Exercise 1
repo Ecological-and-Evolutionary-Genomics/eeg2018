@@ -17,11 +17,11 @@ echo $myline >> seqs.dup.fa
 echo "" >> seqs.dup.fa
 echo $myline >> seqs.dup.fa
 echo "" >> seqs.dup.fa
-done > seqs.dup.fa #output each line of seqs.sort.fa two times, with each line separated by a blank line, and save everything to a new file called seqs.dup.fa
+done > seqs.sort.fa #output each line of seqs.sort.fa two times, with each line separated by a blank line, and save everything to a new file called seqs.dup.fa
 
 grep ">" seqs.dup.fa | uniq > seqs.uniq.fa #output unique sequence identifiers to new file
 
-cut -d' ' -f2 seqs.uniq.fa |sort|uniq|wc -l >ex1-answer.txt #removes blank lines, sorts, and then counts the number of lines and saves that answer to a new file
+cut -d' ' -f2 seqs.uniq.fa | sort | uniq | wc -l > ex1-answer.txt #removes blank lines, sorts, and then counts the number of lines and saves that answer to a new file
 
 rm seqs* #remove all files starting with 'seqs'
 
