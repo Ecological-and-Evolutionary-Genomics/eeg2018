@@ -17,6 +17,7 @@
 ### Working in the cloud
 - using Github for version control
 - using PATRIC for genome and metagenome analysis
+    - Exercise 3: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/Exercise-3---Feb-12---PATRIC>
 - using IMG and MG-RAST for comparative genomics and metagenomics
 - using Galaxy for comparative genomics and metagenomics 
 - using the Arctic Region Supercomputing Center for taxonomic identification of short reads
@@ -26,6 +27,7 @@
 
 ### Taxonomic identification  
 - from amplicon sequencing of ribosomal RNA genes, with mothur
+    - Exercise 4: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/Exercise-4---Feb-19---mothur>
 - from metagenomes, with k-mers using Kaiju
 - from metagenomes, with conserved core genes using Phylosift
 
