@@ -1,0 +1,10 @@
+# Rachel, eeg, exercise 2
+
+
+# find characters with @SRR, then replace @ with > (and then takes out --), paste puts 
+grep -A1 @SRR SRR6004925_1.fastq | tr '@' '>' | grep -v '\-\-' | paste - - > exercise2/Rachel.sh
+
+
+
+
+
