@@ -22,14 +22,14 @@
 - using Galaxy for comparative genomics and metagenomics 
 - using the Arctic Region Supercomputing Center for taxonomic identification of short reads
 
-### Similarity searching
-- using BLAST and DIAMOND
-
 ### Taxonomic identification  
 - from amplicon sequencing of ribosomal RNA genes, with mothur
     - Exercise 4: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/Exercise-4---Feb-19---mothur>
 - from metagenomes, with k-mers using Kaiju
 - from metagenomes, with conserved core genes using Phylosift
+
+### Similarity searching
+- using BLAST and DIAMOND
 
 ### Genome Assembly and Annotation
 - genome assembly with SPAdes
