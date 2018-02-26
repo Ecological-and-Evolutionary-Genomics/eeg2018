@@ -29,7 +29,8 @@
 - from metagenomes, with conserved core genes using Phylosift
 
 ### Similarity searching
-- using BLAST and DIAMOND
+- using BLAST and DIAMOND: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/February-26----Similarity-Searching>
+    - Exercise 5: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/Exercise-5----BLAST-and-DIAMOND-searching>
 
 ### Genome Assembly and Annotation
 - genome assembly with SPAdes
