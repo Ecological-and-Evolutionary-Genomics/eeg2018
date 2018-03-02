@@ -29,3 +29,15 @@ PATH=$PATH:`pwd`
 
 # make a DIAMOND-formatted version of Swiss-Prot database
 ./diamond makedb --in uniprot_sprot.fasta -d uniprot_sprot
+
+# DIAMOND-equivalent of running BLASTX -- FASTQ files
+./diamond blastx -d uniprot_sprot -q SRR3150066_1.fastq -a diamond_output
+
+# see in BLAST-equivalent
+./diamond view -a diamond_output.daa -o diamond_output.csv
+
+# save column 2 to a new file
+cut -f2 diamond_output.csv > diamond_acc.txt
+
+# 'blastdbcmd' indicates a list of accessions
+blastdbcmd -db uniprot_sprot -entry_batch diamond_acc.txt -out diamond_output.txt -outfmt '%t'
