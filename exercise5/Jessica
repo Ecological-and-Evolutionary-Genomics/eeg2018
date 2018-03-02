@@ -1,0 +1,31 @@
+#Make a new directory called exercise5 #Go to this directory
+mkdir ~/exercise5
+cd ~/exercise5
+
+#create soft link to sequences from exercise 2, #Check to see if the sequences are there. 
+ln -s ~/fastq/*.fastq ./
+ls -l 
+
+# download Swiss-Prot database by ftp, #unzip
+wget ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz 
+gunzip uniprot_sprot.fasta.gz
+
+# make a BLAST-formatted version of the Swiss-Prot database 
+# -parse_seqids to make database searchable by sequence identifier 
+makeblastdb -in uniprot_sprot.fasta -out uniprot_sprot -dbtype prot -hash_index -parse_seqids 
+
+#use awk to format from fastq to fasta
+awk 'BEGIN{P=1}{if(P==1||P==2){gsub(/^[@]/,">");print}; if(P==4)P=0; P++}' SRR5170066_1.fastq > mysequences.fasta
+
+# run BlastX
+blastx -query mysequences.fasta -db uniprot_sprot -out blastx_output.csv -outfmt 6 & 
+
+# download DIAMOND from github  
+wget https://github.com/bbuchfink/diamond/releases/download/v0.9.18/diamond-linux64.tar.gz
+tar xzf diamond-linux64.tar.gz
+
+# add DIAMOND to PATH 
+PATH=$PATH:`pwd`
+
+# make a DIAMOND-formatted version of Swiss-Prot database
+./diamond makedb --in uniprot_sprot.fasta -d uniprot_sprot
