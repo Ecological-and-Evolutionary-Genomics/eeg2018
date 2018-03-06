@@ -25,7 +25,8 @@
 ### Taxonomic identification  
 - from amplicon sequencing of ribosomal RNA genes, with mothur
     - Exercise 4: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/Exercise-4---Feb-19---mothur>
-- from metagenomes, with k-mers using Kaiju
+- from metagenomes, with k-mers using Centrifuge and Kaiju
+    - Exercise 6 <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/March-5----Exercise-6----Using-kmers-to-identify-metagenomic-reads-with-Centrifuge>
 - from metagenomes, with conserved core genes using Phylosift
 
 ### Similarity searching
