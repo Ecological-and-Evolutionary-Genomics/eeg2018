@@ -11,8 +11,6 @@
  make #takes a few minutes
  cd ../
 
-
-
 #install prereqs
  wget http://ftp-trace.ncbi.nlm.nih.gov/sra/ngs/2.9.0/ngs-sdk.2.9.0-linux.tar.gz
  wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.9.0/sratoolkit.2.9.0-ubuntu64.tar.gz
@@ -59,7 +57,7 @@ require(pavian)
 
  pavian::runApp(port=5000)
 
- # Pavian will then be available at http://127.0.0.1:5000 in the web browser of you choice.
+# Pavian will then be available at http://127.0.0.1:5000 in the web browser of you choice.
 # Window opens automatically and click upload file 
 #click save table
 
