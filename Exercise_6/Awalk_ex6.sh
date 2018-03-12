@@ -40,9 +40,10 @@ ls -l
 
 #run centrifuge on paired end metagenome samples with specified output and report names
 ./centrifuge-1.0.3/centrifuge -x p_compressed -1 SRR5396644_1.fastq.gz -2 SRR5396644_2.fastq.gz  -S MGM_output_class.tsv --report-file MGM_centrifuge_report.tsv 
-#convert output from celtrifuge analysis above to kraken format report file 
-./centrifuge-1.0.3/centrifuge-kreport -x MGM_centrifuge_report.tsv 
+
+#convert output from centrifuge analysis above to kraken format report file 
 ./centrifuge-1.0.3/centrifuge-kreport -x p_compressed MGM_output_class.tsv > MGM_pavian.report.csv
+
 #to run pavian in browser must do it from laptop not supercomputer
 #transfer output files from supercomputer
 scp amwalker8@chinook.alaska.edu:/import/c1/SFOSDNA/amwalker8/EEG/exercise6/MGM_pavian.report.csv /Users/alexiswalker/Desktop/EEG/exercise6/
@@ -58,14 +59,16 @@ require(pavian)
  pavian::runApp(port=5000)
 
 # Pavian will then be available at http://127.0.0.1:5000 in the web browser of you choice.
-# Window opens automatically and click upload file 
-#click save table
-
+# Window opens automatically and click upload file MGM_pavian.report.csv
+# Click save table
 
 #kaiju webserver
+
+#zip fastq metagenome files
 gzip SRR5396644_1.fastq
 gzip SRR5396644_2.fastq
 
+#transfer zipped fastq metagenome files from supercomputer
 scp amwalker8@chinook.alaska.edu:/import/c1/SFOSDNA/amwalker8/EEG/exercise2/fastq/SRR5396644_1.fastq.gz /Users/alexiswalker/Desktop/EEG/exercise6/
 scp amwalker8@chinook.alaska.edu:/import/c1/SFOSDNA/amwalker8/EEG/exercise2/fastq/SRR5396644_2.fastq.gz /Users/alexiswalker/Desktop/EEG/exercise6/
 
