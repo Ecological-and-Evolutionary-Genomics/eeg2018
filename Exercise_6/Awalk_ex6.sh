@@ -24,13 +24,14 @@
  ./centrifuge-1.0.3/centrifuge --version
 
  # download the LARGE (4.4 Gb) centrifuge database of Bacteria and Archaea
- screen wget ftp://ftp.ccb.jhu.edu/pub/infphilo/centrifuge/data/p_compressed.tar.gz
+ wget ftp://ftp.ccb.jhu.edu/pub/infphilo/centrifuge/data/p_compressed.tar.gz
 
-#md5sum p_compressed.tar.gz: 3e14f37576012a2fce79879281e81fcf
+#check to make sure the download is uncorrupted
+#md5sum p_compressed.tar.gz: 3e14f37576012a2fce79879281e81fcf - provided by ftp://ftp.ccb.jhu.edu/pub/infphilo/centrifuge/data/
 md5sum p_compressed.tar.gz
-#3e14f37576012a2fce79879281e81fcf  p_compressed.tar.gz
+#3e14f37576012a2fce79879281e81fcf  p_compressed.tar.gz ## all is good
 
-tar -xvzf p_compressed.tar.gz
+tar -xvzf p_compressed.tar.gz #decompress file
 
 # make a soft link to the metagenomic data you downloaded in Exercise 2
 ln -s ../exercise2/fastq/SRR5396644* ./
