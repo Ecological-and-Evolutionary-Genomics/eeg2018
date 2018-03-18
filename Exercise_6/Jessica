@@ -1,0 +1,40 @@
+#make directory
+mkdir ~/exercise6
+cd ~/exercise6
+
+#download from source
+ wget https://github.com/infphilo/centrifuge/archive/v1.0.3.tar.gz
+ tar -xvzf v1.0.3.tar.gz
+
+ #compile centrifuge from source
+ cd centrifuge-1.0.3
+
+ #install prereqs
+ wget http://ftp-trace.ncbi.nlm.nih.gov/sra/ngs/2.9.0/ngs-sdk.2.9.0-linux.tar.gz
+ wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.9.0/sratoolkit.2.9.0-ubuntu64.tar.gz
+ tar xvzf ngs-sdk.2.9.0-linux.tar.gz
+ tar xvzf sratoolkit.2.9.0-ubuntu64.tar.gz
+
+ make USE_SRA=1 NCBI_NGS_DIR=./ngs-sdk.2.9.0-linux NCBI_VDB_DIR=./sratoolkit.2.9.0-ubuntu64
+ cd ..
+
+ #test
+ ./centrifuge-1.0.3/centrifuge --version
+
+ # download and unzip centrifuge database of Bacteria and Archaea
+ screen wget ftp://ftp.ccb.jhu.edu/pub/infphilo/centrifuge/data/p_compressed.tar.gz
+ tar -xvzf p_compressed.tar.gz
+ 
+  ./centrifuge-1.0.3/centrifuge -x p_compressed --sra-acc SRR5170066 -S output_classification.tsv
+
+ # install pavian in R
+ R
+ options(repos = c(CRAN = "http://cran.rstudio.com"))
+ install.packages("remotes")
+ remotes::install_github("rec3141/pavian")
+
+ #To run Pavian from R, type
+
+ pavian::runApp(port=5000)
+
+ #http://127.0.0.1:5000 in web browser.
