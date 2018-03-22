@@ -35,6 +35,7 @@
 
 ### Genome Assembly and Annotation
 - genome assembly with SPAdes
+    - Exercise 7: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/March-22----Exercise-7----Genome-and-Metagenome-Assembly-using-SPAdes>
 - genome annotation with RAST
 
 ### Metagenome Assembly and Binning
