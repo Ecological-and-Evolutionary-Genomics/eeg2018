@@ -1,0 +1,40 @@
+mkdir ~/exercise7 #make exercise7 directory
+ cd ~/exercise7 #move to exercise 7 directory
+
+ wget http://spades.bioinf.spbau.ru/release3.11.1/SPAdes-3.11.1-Linux.tar.gz
+ #download SPAdes program
+ tar -xzf SPAdes-3.11.1-Linux.tar.gz 
+ #unzip SPAdes program
+ 
+~/sratoolkit.2.8.2-1-ubuntu64/bin/fastq-dump --outdir fastq --skip-technical --readids --dumpbase --split-files --clip SRR6171585
+ #downloads fastQ files from SRR6171585
+ 
+
+
+ screen -L ./SPAdes-3.11.1-Linux/bin/spades.py --careful --memory 5 --pe1-1 fastq/SRR6171585_1.fastq --pe1-2 fastq/SRR6171585_2.fastq -o ./spades-run1
+ 
+ #screen runs command in separate screen
+ #-L tells screen to write everything to a log file
+ 
+ # SPAdes is a program written in python, we'll call it directly from the installation directory
+ # '--careful' tells SPAdes to do extra error correction. From the manual: "Tries to reduce the number of mismatches and short indels. Also runs MismatchCorrector – a post processing tool, which uses BWA tool (comes with SPAdes)."
+ # '--memory 8' tells SPAdes to use only 8Gb of memory. If you have less in your virtual machine, set this lower. If you have more, set it higher.
+ # '--pe1-1' and '--pe1-2' tell SPAdes that these two files belong to the same paired end library (#1); the first set of reads is often named '*R1_001.fastq' and the second set is often '*R2_001.fastq' but you'll have to find these from your fastq downloads
+ # '-o ./spades-run1' tells SPAdes to save the output to a folder in the current directory called 'spades-run1'
+
+ wget https://github.com/rrwick/Bandage/releases/download/v0.8.1/Bandage_Ubuntu_dynamic_v0_8_1.zip  
+  unzip Bandage_Ubuntu_dynamic_v0_8_1.zip
+  
+  #downloads Bandage program
+  
+  Open Bandage from virtual box and open .gfa file from exercise7 directory
+  
+  #Find and download entire proteome from similar genome
+  #create/view blast search
+  #load FASTA file 
+  #run BLAST search
+  #close
+  #choose contig that is a repeat
+  #output--> web BLAST selected node
+  
+  #node sequence- 
