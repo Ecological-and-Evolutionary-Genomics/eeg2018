@@ -7,16 +7,14 @@ wget http://spades.bioinf.spbau.ru/release3.11.1/SPAdes-3.11.1-Linux.tar.gz
 tar -xzf SPAdes-3.11.1-Linux.tar.gz 
 
 #download fastq files SRR6061427
-~/sratoolkit.2.8.2-1-ubuntu64/bin/fastq-dump --outdir fastq --skip-technical --readids --dumpbase --split-files --clip SRR6061427
+~/sratoolkit.2.8.2-1-ubuntu64/bin/fastq-dump --outdir fastq --skip-technical --readids --dumpbase --split-files --clip SRR5170066
 
-screen -L ./SPAdes-3.11.1-Linux/bin/spades.py --careful --memory 2 --pe1-1 SRR6061427_1.fastq --pe1-2 fastq/SRR6061427_2.fastq -o ./spades-run3
-#screen runs SPAdes in another screen, -L tells screen to write everything to a log file
- 
+./SPAdes-3.11.1-Linux/bin/spades.py --careful --memory 2 --pe1-1 SRR5170066_1.fastq --pe1-2 fastq/5170066_2.fastq -o ./spades-run1
 # SPAdes is a program written in python, we'll call it directly from the installation directory 
 # '--careful' tells SPAdes to do extra error correction. From the manual: "Tries to reduce the number of mismatches and short indels. Also runs MismatchCorrector – a post processing tool, which uses BWA tool (comes with SPAdes)." 
 # '--memory 8' tells SPAdes to use only 8Gb of memory. If you have less in your virtual machine, set this lower (I used --memory 2). If you have more, set it higher.
 # '--pe1-1' and '--pe1-2' tell SPAdes that these two files belong to the same paired end library (#1); the first set of reads is often named '*R1_001.fastq' and the second set is often '*R2_001.fastq' but you'll have to find these from your fastq downloads
-# '-o ./spades-run3' tells SPAdes to name the output folder 'spades-run3', and save it to the current directory
+# '-o ./spades-run3' tells SPAdes to name the output folder 'spades-run1', and save it to the current directory
 
  wget https://github.com/rrwick/Bandage/releases/download/v0.8.1/Bandage_Ubuntu_dynamic_v0_8_1.zip  
   unzip Bandage_Ubuntu_dynamic_v0_8_1.zip
