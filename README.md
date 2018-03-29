@@ -20,7 +20,7 @@
     - Exercise 3: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/Exercise-3---Feb-12---PATRIC>
 - using IMG and MG-RAST for comparative genomics and metagenomics
 - using Galaxy for comparative genomics and metagenomics 
-- using the Arctic Region Supercomputing Center for taxonomic identification of short reads
+- using the Research Computing Services HPC cluster: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/March-26----RCS-Supercomputer-Tutorial>
 
 ### Taxonomic identification  
 - from amplicon sequencing of ribosomal RNA genes, with mothur
@@ -37,6 +37,7 @@
 - genome assembly with SPAdes
     - Exercise 7: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/March-22----Exercise-7----Genome-and-Metagenome-Assembly-using-SPAdes>
 - genome annotation with RAST
+    - Exercise 8: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/March-26----Exercise-8----Genome-Annotation-using-RAST>
 
 ### Metagenome Assembly and Binning
 - metagenome assembly with metaSPADES
