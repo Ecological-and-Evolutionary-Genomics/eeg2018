@@ -14,7 +14,7 @@ tar -xzf SPAdes-3.11.1-Linux.tar.gz
 # '--careful' tells SPAdes to do extra error correction. From the manual: "Tries to reduce the number of mismatches and short indels. Also runs MismatchCorrector – a post processing tool, which uses BWA tool (comes with SPAdes)." 
 # '--memory 8' tells SPAdes to use only 8Gb of memory. If you have less in your virtual machine, set this lower (I used --memory 2). If you have more, set it higher.
 # '--pe1-1' and '--pe1-2' tell SPAdes that these two files belong to the same paired end library (#1); the first set of reads is often named '*R1_001.fastq' and the second set is often '*R2_001.fastq' but you'll have to find these from your fastq downloads
-# '-o ./spades-run3' tells SPAdes to name the output folder 'spades-run1', and save it to the current directory
+# '-o ./spades-run1' tells SPAdes to name the output folder 'spades-run1', and save it to the current directory
 
  wget https://github.com/rrwick/Bandage/releases/download/v0.8.1/Bandage_Ubuntu_dynamic_v0_8_1.zip  
   unzip Bandage_Ubuntu_dynamic_v0_8_1.zip
