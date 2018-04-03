@@ -19,7 +19,8 @@
 - using PATRIC for genome and metagenome analysis
     - Exercise 3: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/Exercise-3---Feb-12---PATRIC>
 - using IMG and MG-RAST for comparative genomics and metagenomics
-- using Galaxy for comparative genomics and metagenomics 
+- using Galaxy for comparative genomics and metagenomics
+    - Exercise 10: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/April-2----Exercise-9----Galaxy-Workflows>
 - using the Research Computing Services HPC cluster: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/March-26----RCS-Supercomputer-Tutorial>
 
 ### Taxonomic identification  
