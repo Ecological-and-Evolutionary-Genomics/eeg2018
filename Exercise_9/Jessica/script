@@ -1,0 +1,16 @@
+#create directory and go to it
+mkdir exercise9
+cd exercise9
+#download metagenome of hydrothermal vents
+~/sratoolkit.2.8.2-1-ubuntu64/bin/fastq-dump --outdir fastq --skip-technical --readids --dumpbase --split-files --clip ERR1236493
+#download methanosarcina genome at ncbi.nlm.gov/genome, click "Assembly", click "Download Genbank Assembly".
+
+# go to usegalaxy.org
+#upload methanosarcina genome 
+#upload metagenome
+#convert fastq to fasta (for metagenome)
+#go to "vsearch search" tool
+#use methanosarcina genome as database
+#use metagenome fastq as query 
+#Click on extract workflow 
+#Screen shot of workflow
