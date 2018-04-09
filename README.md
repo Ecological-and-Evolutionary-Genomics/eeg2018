@@ -43,4 +43,5 @@
 ### Metagenome Assembly and Binning
 - metagenome assembly with metaSPADES
 - metagenome binning with metaBAT
+    - Exercise 10: <https://github.com/Ecological-and-Evolutionary-Genomics/eeg2018/wiki/April-9----Exercise-10----Metagenome-Binning>
 - metagenome bin visualizaiton with VizBin, anvi'o?
