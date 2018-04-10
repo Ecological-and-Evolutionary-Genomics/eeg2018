@@ -2,7 +2,7 @@
 mkdir exercise9
 cd exercise9
 #download metagenome of hydrothermal vents
-~/sratoolkit.2.8.2-1-ubuntu64/bin/fastq-dump --outdir fastq --skip-technical --readids --dumpbase --split-files --clip ERR1236493
+~/sratoolkit.2.8.2-1-ubuntu64/bin/fastq-dump --skip-technical --readids --dumpbase --split-files --clip SRR6662714
 #download methanosarcina genome at ncbi.nlm.gov/genome, click "Assembly", click "Download Genbank Assembly".
 
 # go to usegalaxy.org
@@ -14,3 +14,8 @@ cd exercise9
 #use metagenome fastq as query 
 #Click on extract workflow 
 #Screen shot of workflow
+
+##go to patricbrc.org/job
+#select metagenome binning under "services" tab
+#upload fastq files and submit
+#open binning report and screenshot
