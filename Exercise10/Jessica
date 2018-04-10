@@ -1,0 +1,38 @@
+#install Docker
+sudo apt-get update
+
+sudo apt-get install \
+    linux-image-extra-$(uname -r) \
+    linux-image-extra-virtual
+
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt-get update
+
+sudo apt-get install docker-ce
+
+#download three related metagenomes
+~/sratoolkit.2.8.2-1-ubuntu64/bin/fastq-dump --skip-technical --readids --dumpbase --split-files --clip SRR6662714
+~/sratoolkit.2.8.2-1-ubuntu64/bin/fastq-dump --skip-technical --readids --dumpbase --split-files --clip ERR1236493
+~/sratoolkit.2.8.2-1-ubuntu64/bin/fastq-dump --skip-technical --readids --dumpbase --split-files --clip ERR2226415
+
+#make these fastq files smaller using "head"
+head -n1000000 SRR6662714_1.fastq > 1.1.fastq
+head -n1000000 SRR6662714_2.fastq > 1.2.fastq
+head -n1000000 ERR1236493_1.fastq > 2.1.fastq
+head -n1000000 ERR1236493_2.fastq > 2.2.fastq
+head -n1000000 ERR2226415_1.fastq > 3.1.fastq
+head -n1000000 ERR2226415_2.fastq > 3.2.fastq
+#assemble all 3 of these runs in SPAdes
+./SPAdes-3.11.1-Linux/bin/spades.py --careful --memory 8 --pe1-1 1.1.fastq --pe1-2 1.2.fastq --pe2-1 2.1.fastq --pe2-2 2.2.fastq --pe3-1 3.1.fastq --pe3-2 3.2.fastq -o ./spadesrun4.9
