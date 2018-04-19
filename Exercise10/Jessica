@@ -36,3 +36,8 @@ head -n1000000 ERR2226415_1.fastq > 3.1.fastq
 head -n1000000 ERR2226415_2.fastq > 3.2.fastq
 #assemble all 3 of these runs in SPAdes
 ./SPAdes-3.11.1-Linux/bin/spades.py --careful --memory 8 --pe1-1 1.1.fastq --pe1-2 1.2.fastq --pe2-1 2.1.fastq --pe2-2 2.2.fastq --pe3-1 3.1.fastq --pe3-2 3.2.fastq -o ./spadesrun4.9
+
+#create sorted mapped .bam files for each read
+bbmap/bbmap.sh in=1.1.fastq in2=1.2.fastq out=MG1-mapped.bam ref=scaffolds.fasta bamscript=bs.sh
+bbmap/bbmap.sh in=2.1.fastq in2=2.2.fastq out=MG2-mapped.bam ref=scaffolds.fasta bamscript=bs.sh
+bbmap/bbmap.sh in=3.1.fastq in2=3.2.fastq out=MG3-mapped.bam ref=scaffolds.fasta bamscript=bs.sh
