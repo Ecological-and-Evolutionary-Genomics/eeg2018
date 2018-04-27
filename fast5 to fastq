@@ -1,3 +1,0 @@
-git clone https://github.com/rrwick/Fast5-to-Fastq
-fast5_to_fastq.py path/to/fast5_directory > output.fastq
-head -n1000000 output.fastq > output.short.fastq
