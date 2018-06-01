@@ -1,0 +1,26 @@
+# old package for packages list in BioLinux
+  (echo deb http://de.archive.ubuntu.com/ubuntu/ lucid main restricted universe multiverse; echo deb http://de.archive.ubuntu.com/ubuntu/ lucid-updates main restricted universe multiverse; echo deb http://security.ubuntu.com/ubuntu lucid-security main restricted universe multiverse) | sudo sh -c 'cat >>/etc/apt/sources.list'
+
+  sudo add-apt-repository ppa:bitcoin/bitcoin
+
+# then update the sources list
+  sudo apt-get update
+
+# then we can install the dependencies
+  sudo apt-get install blast2 libwxgtk2.8-0 libxml2 libdb4.8 libdb4.8-dev libdb4.8++-dev
+
+# I had to do
+  sudo apt-get -f install
+
+# download the MyRast packages
+  wget http://blog.theseed.org/downloads/myrast-runtime_1.0-1ubuntu1_amd64.deb
+  wget http://blog.theseed.org/downloads/myrast_33-1ubuntu2_amd64.deb
+
+# install them using dpkg
+  sudo dpkg -i myrast-runtime_1.0-1ubuntu1_amd64.deb
+  sudo dpkg -i myrast_33-1ubuntu2_amd64.deb
+
+  myrast
+
+# Click Process new genome and browse to ~/exercise7/spades-run1/scaffolds.fasta.
+# Click start processing and then View Processed Genome after it's done
